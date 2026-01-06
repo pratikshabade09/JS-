@@ -1,2 +1,2 @@
 # JS
-Exciting jouney!!
+Exciting journey!!
