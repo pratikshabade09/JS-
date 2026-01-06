@@ -145,3 +145,44 @@ let subject = new String("Science") //through 'new' we can create a String objec
 //some methods: charAt(), replace(), includes(), trim(), slice(), split(), toUpperCase(), toLowerCase() --> check on mdm all others
 
 
+//video12
+//Numbers and Maths
+
+//NUMBER
+const numb = 123;
+const numb2 =  Number(null);
+const numb3 =  Number(undefined);
+const numb4 =  Number("ds");
+const numb5 =  Number(3245);
+
+// console.log(numb);  //123
+// console.log(numb2); //0
+// console.log(numb3); //NaN
+// console.log(numb4); //NaN
+// console.log(numb5==numb4);
+// console.log(typeof numb3,typeof numb2, typeof numb4);  //number
+
+//methods
+// console.log(numb.toString().length);    //3
+// console.log(numb5.toFixed(1), numb5.toFixed(2));  //3245.0, 3245.00
+// console.log(numb5.toPrecision(1),numb5.toPrecision(2),numb5.toPrecision(4))   //3.2e+3, 32.4e+2, 3245  (convert into exponential form) 
+let numb6 =100000000;
+// console.log(numb6.toLocaleString(),numb6.toLocaleString('en-IN'),numb6.toLocaleString('en-US')); //10,00,00,000   10,00,00,000    100,000,000
+
+
+//MATH
+// console.log(Math)
+// console.log(Math.abs(-8))
+// console.log(Math.round(4.2),Math.round(4.5),Math.round(4.6))
+// console.log(Math.ceil(4.6),Math.ceil(4.1),Math.ceil(4.0))
+// console.log(Math.floor(4.1),Math.floor(4.5),Math.floor(4.6))
+// console.log(Math.min(4,78,35,987))
+// console.log(Math.max(3,28,742,363,54))
+// console.log(Math.random())  //creates a random value from 0 to 1
+// console.log((Math.random()*10)+1)   //from 1 to 10 with decimal
+// console.log((Math.floor(Math.random()*10))+1)    //single integer from 1 to 10
+let min =10;
+let max = 30;
+
+// console.log(Math.floor(Math.random()*(max-min+1))+min)
+//IMP Formula when we have to generate random number between a given range of 2 numbers
