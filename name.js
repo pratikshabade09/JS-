@@ -185,4 +185,75 @@ let min =10;
 let max = 30;
 
 // console.log(Math.floor(Math.random()*(max-min+1))+min)
-//IMP Formula when we have to generate random number between a given range of 2 numbers
+/*IMP Formula when we have to generate random number
+ between a given range of 2 numbers*/
+
+ //video13
+ //Date and Time
+ let myDate = new Date()
+//  console.log(typeof myDate) //object
+//  console.log(myDate.toString()) //Wed Jan 07 2026 16:38:26 GMT+0530 (India Standard Time)
+//  console.log(myDate.toISOString)    //[Function: toISOString]
+//  console.log(myDate.toJSON())   //2026-01-07T11:08:26.127Z
+//  console.log(myDate.toLocaleDateString())   //7/1/2026
+//  console.log(myDate.toLocaleString())   //7/1/2026, 4:38:26 pm
+//  console.log(myDate.toLocaleTimeString())   //4:38:26 pm
+//  console.log(myDate.toTimeString()) //16:38:26 GMT+0530 (India Standard Time)
+//  console.log(myDate.toUTCString())  //Wed, 07 Jan 2026 11:08:26 GMT
+
+let Date2 = new Date()
+// console.log(Date2.toString())
+// console.log(Date2.getDate(), Date2.getMonth())  //7(7th Jan)    0(for Jan month)
+
+// console.log(Date2.toLocaleString('en-UK')) //location specific time zones
+
+// console.log(Date2.toLocaleString('en-UK',{
+//     weekday: "short",
+//     month: "long"
+// }))         //Wed (month: January)
+
+// NOTE: string interpolation means ``(backticks)
+
+//video14
+//Arrays
+//resizable in JS
+//Shallow copy i.e. make same reference point or changes the actual array 'after the code executes'
+//Deep Copy i.e. make array copy but the copy does not change even if the actual array change in code later on.
+//Shallow copy is formed when JS makes performs a copy operation
+
+let arr = [1,5,7,3]
+let arr2 = new Array(1,5,7,3)
+// console.log(typeof arr,typeof arr2) //object
+// console.log(arr.length, arr.size, arr.capacity)   //4 undefined undefined
+// console.log(arr2[5],arr[1]) //undefined 5
+
+//Array Methods
+// arr.push(4)
+// arr.push(9)
+// arr.pop()
+// console.log(arr)     //[1,5,7,3,4]
+
+// arr.unshift(6)      //just like push() but add elements in beginning 
+// console.log(arr)    //[6,1,5,7,3,4]
+// arr.shift()         //just like pop() but removes element at 0th index
+// console.log(arr)    //[1,5,7,3,4]
+
+//NOTE: unshift() & shift() causes whole array to shift so for long dataset it is not optimal to use them.
+
+// console.log(arr.includes(4),arr.includes(2))    //true false
+// console.log(arr.indexOf(4),arr.indexOf(2))    //4 -1 (-1 bcz 2 doesn't exist in the array)
+
+// const arr3 = arr.join("-")  //join() takes single arg and that is the separator btw each element of the formed string
+// console.log(arr3)       //1-5-7-3 and this will be in the form of string not array
+
+//splice and slice
+let newArr = [3,4,5,6]
+
+const naya = newArr.slice(1,3)      //(include:1, exclude:3) and doesn't change the original array
+// console.log(naya)
+// console.log("A ", newArr)
+
+const naya2 = newArr.splice(1,3)    //(include:1,3) and remove them from the original array
+// console.log(naya2)
+// console.log("B", newArr)
+
