@@ -257,3 +257,57 @@ const naya2 = newArr.splice(1,3)    //(include:1,3) and remove them from the ori
 // console.log(naya2)
 // console.log("B", newArr)
 
+
+
+//video15
+//Arrays-II -->(working on adding arrays or spliting)
+const array = ["me", "mumma","mama","brother"]
+const array2 = ["shravani", "jyoti","mangal"]
+
+//pushing one array in another
+// let pushh = array.push(array2)
+// console.log(pushh);      //will return the length of the new formed array i.e. 5 bcoz ["me", "mumma","mama","brother","["shravani", "jyoti","mangal"]"]
+// console.log(array)      //[ 'me', 'mumma', 'mama', 'brother', [ 'shravani', 'jyoti', 'mangal' ] ]
+// console.log(array[4][1])  //jyoti --> index of subarray with main array will print the proper element
+
+
+//concatination of 2 arrays
+// let conc = array.concat(array2)
+// console.log(conc)
+/*[
+  'me',       'mumma',
+  'mama',     'brother',
+  'shravani', 'jyoti',
+  'mangal'
+]*/
+
+
+//spread operator
+let spr = [...array, ...array2]
+// console.log(spr)
+/*[
+  'me',       'mumma',
+  'mama',     'brother',
+  'shravani', 'jyoti',
+  'mangal'
+]*/
+
+
+//flat() method
+const flt = [1,2,4,[4,7,5,1,0],4,85,2,[8,9,[3,0,0]]]
+// console.log(flt.flat()) //by default it flatens upto 1 level i.e. [ 1, 2, 4, 4, 7, 5, 1, 0, 4, 85, 2, 8, 9, [ 3, 0, 0 ] ]
+// console.log(flt.flat(2)) //upto level 2 will be separated i.e. [1, 2, 4,  4, 7, 5,1, 0, 4,85, 2, 8,9, 3, 0,0]
+// console.log(flt.flat(Infinity))// all levels will be separated i.e. [1, 2, 4,  4, 7, 5,1, 0, 4,85, 2, 8,9, 3, 0,0]
+
+//some basic methods of array
+// console.log(Array.isArray("Pratiksha"))     //false
+// console.log(Array.from("Pratiksha"))        //convert into array  [ 'P', 'r', 'a', 't', 'i', 'k', 's', 'h', 'a']
+// console.log(Array.from({name:[2,4]}))     //[] --> this means even if value is array still key is not iterable so will return an empty array i.e. []
+// console.log(Array.from({name:"Pratiksha"}))    //[]
+
+let scr1= 100
+let scr2=200
+let scr3=100
+let scr4=300
+
+// console.log(Array.of(scr1, scr2,scr3,scr4))      //[ 100, 200, 100, 300 ]
