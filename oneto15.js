@@ -1,3 +1,4 @@
+//video1 to video4
 "use strict"; //--> stricter rules applied to your code (that does not allow common errors to bypass)
 
 //premitive datatypes: number(2^53-1), bigint(hardly used), string, boolean, null(standalone value), undefined(no value to variable eg., let dress;, symbol(used in react to define unique))
