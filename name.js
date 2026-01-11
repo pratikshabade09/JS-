@@ -171,3 +171,134 @@ function return2ndValue(getArray){
 
 //video21
 //Global & Local Scopes
+ 
+let a = 3;
+var b = 9;
+const c = 5;
+
+if(true){
+  let a = 8;
+  var b = 4;
+  const c = 7;
+  //block level scope ({})
+  // console.log("Inner:",a) //8
+  // console.log("Inner:",b) //4
+  // console.log("Inner:",c) //7
+}
+
+//global scope
+// console.log(a)  //3
+// console.log(b)  //4 --> Avoid using var bcz it is accessible outside brackets too.
+// console.log(c)  //5
+
+//video22
+//
+function one(){
+  const name = "pratuu"
+  function two(){
+    const website = "YT"
+    // console.log(name) // --> can access only when two() is called somewhere
+  }
+  // console.log(website) //--> cannot access
+  // console.log(name) //--> can access
+  two()
+}
+
+// one()
+
+if(true){
+  const naam = "priti"
+  if(naam=="priti"){
+    const website = "YT"
+    // console.log(naam+website) //accessible
+  }
+  // console.log(website) //not accessible
+}
+  // console.log(naam)  //not accessible
+
+
+//interesting concept
+
+// console.log(addOne(7))    //can be executed. Output: 8
+function addOne(num){
+  return num+1
+}
+// addOne(7)
+
+// console.log(addTwo(7))   //Won't work here b4 initialization bcz stored in variable
+const addTwo = function(num){
+  return num+2
+}
+// console.log(addTwo(7))   //Works! Output:9
+
+
+//video23
+//THIS and arrow function
+const userk = {
+  username:"Pratuu",
+  price:999,
+  welcome: function(){
+    console.log(`Hey ${this.username}, welcome to the family.`)
+  }
+}
+
+// userk.welcome()   //Hey Pratuu, welcome to the family.
+// userk.username = "Aniyaa"
+// userk.welcome()   //Hey Aniyaa, welcome to the family.
+
+// console.log(this)   //{} --> an empty obj
+// function A(){
+//   const usern = "Rakesh"
+//   console.log(this)   //will give something big output :)
+//   console.log(this.usern)   //undefined --> 'this' won't work well inside a function
+// }
+// A()
+
+// console.log(this)    //Run in browser console --> returns a window object
+//NOTE: Browser ka global object --> Window object
+
+//Arrow Function
+const chai = () => {
+  const usern = "Rakesh"
+  console.log(this)   //{}
+  console.log(this.usern)   //undefined --> 'this' won't work well inside a function
+}
+// chai()
+
+//explicit method
+// const summ = (num1) => {
+//   return num1
+// }
+// console.log(summ(3)) //3
+
+//syntax wise alternative: Implicit Method
+const summ = (num1) => num1 //no need of {} and 'return' keyword
+// console.log(summ(3))    //3
+// console.log(summ({
+//   usernm: "MEW",
+//   location:"India west",
+//   JobType:"remote"
+// }))   //{ usernm: 'MEW', location: 'India west', JobType: 'remote' }
+
+// const dealObj = num2 => ({username:"Pratiksha"})    //write in parenthesis() the output. Here, (num2).
+// console.log(dealObj(9))   //{ username: 'Pratiksha' }
+
+
+
+//video24 ---------Thoda Difficult hain-------------------------------------------------
+//Immediatel invoked function expression (IIFE)
+//why to use IIFE ? ==> we don't want global scope pollution
+
+//named IIFE
+;(function coffee(){
+  console.log("DB Connecting...");
+})()    //DB Connecting...
+
+//unnamed IIFE
+;((name) => {
+  console.log(`DB CONNECTED ${name}`);
+})("priti")    //DB CONNECTED
+
+// NOTE: If writing 2 IIFE's then don't forget to put ; b4 starting...
+//
+
