@@ -290,15 +290,36 @@ const summ = (num1) => num1 //no need of {} and 'return' keyword
 //why to use IIFE ? ==> we don't want global scope pollution
 
 //named IIFE
-;(function coffee(){
-  console.log("DB Connecting...");
-})()    //DB Connecting...
+// ;(function coffee(){
+//   console.log("DB Connecting...");
+// })()    //DB Connecting...
 
 //unnamed IIFE
-;((name) => {
-  console.log(`DB CONNECTED ${name}`);
-})("priti")    //DB CONNECTED
+// ;((name) => {
+//   console.log(`DB CONNECTED ${name}`);
+// })("priti")    //DB CONNECTED
 
 // NOTE: If writing 2 IIFE's then don't forget to put ; b4 starting...
-//
 
+
+//video25
+//Execution context --> environment in which code is being executed
+                  //--> 1.Global EC : default, represented by 'this', in browser referred to as window object.
+                  //--> 2. Function EC : Created whenever a function is called.
+                  //--> 3. Eval EC : Created when code is executed inside an eval function (less common).
+                        //In eval, console.log("X+Y") this way immediate execution is done inside a string 
+
+//1.Memory creation phase--> only memory is allocated
+//2. Execution phase--> actual execution is done here
+
+
+
+
+
+
+
+
+
+
+
+                  
