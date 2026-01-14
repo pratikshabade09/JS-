@@ -312,8 +312,13 @@ const summ = (num1) => num1 //no need of {} and 'return' keyword
 //1.Memory creation phase--> only memory is allocated
 //2. Execution phase--> actual execution is done here
 
+/*
+single block of code hain toh ek dabbe mei store ho jagta hain aur fir voh memory + execution phase 
+se gujarta hain. If nested function jaisa kuch hain to similar hi hoga bs function ke liye alag se ek 
+dabba banega jisme sab store and execute hoga
+*/
 
-
+//video26
 
 
 
