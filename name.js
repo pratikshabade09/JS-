@@ -319,10 +319,62 @@ dabba banega jisme sab store and execute hoga
 */
 
 //video26
+//control flow in JS
+//short hand notation in if-else:
+// if(2>1) console.log("sahi hain!")   //semicolon is prefered for readability
+// if(2>1) console.log("sahi hain!"), console.log("done!");    //bad practice --> not readable
 
+//switch 
+let month = 5;
+// switch (month) {
+//   case 1:
+//     console.log("January");
+//     break;
+//   case 2:
+//     console.log("february");
+//     break;
+//   case 3:
+//     console.log("march");
+//     break;
+//   case 4:
+//     console.log("april");
+//     break;
+//   case 5:
+//     console.log("may");
+//     break;
+//   case 6:
+//     console.log("june");
+//     break;
+//   case 7:
+//     console.log("july");
+//     break;
 
+//   default:
+//     break;
+// }
 
+//falsy values and truthy values
+//falsy values: false, 0 , -0, BigInt 0n, null, undefined, NaN
+//truthy values: all other than falsy. Special cases: "0", 'false', " ", [],{}, function (){} 
 
+//interview specials:
+ //false == 0 //true
+ //false== ' '  //true
+ //0==' '   //true
+
+//Nullish Coalescing Operator (??): null undefined
+//Agar database se 'null' ya 'undefined' jaisi values aaye toh alternative option ke liye use hota hain!
+let val1;
+// val1 = null ?? 10;   //10
+// val1 = undefined ?? 20;  //20
+// val1 = null ?? 12 ?? 34;   //12
+
+// console.log(val1)
+
+//Ternary operator (?)
+const ice = 200;
+
+// ice>20 ? console.log("true") : console.log("false")    //true
 
 
 
