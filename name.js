@@ -376,7 +376,132 @@ const ice = 200;
 
 // ice>20 ? console.log("true") : console.log("false")    //true
 
+//video27&28
+//loops
+
+//for
+let arr = [2,7,345,76]
+// for(i=0; i<arr.length;i++){
+//   if(arr[i]==76){
+//     console.log(`Found element ${arr[i]} at position ${i+1}`);
+//   }
+//   else{
+//     continue;
+//   }
+// }
+
+//while
+// let i = 0;
+// while(i<arr.length){
+//   console.log(`Element is ${arr[i]}`);
+//   i++;
+// }
+
+//do while
+// let j = 0;
+// do {
+//   console.log(arr[j]);
+//   j++;
+// } while (j<arr.length);
 
 
+//High Order Array loops
+//for of
+for (const i of arr) {
+  // console.log(i)    //here i is the element in array not the index of element.
+}
 
-                  
+const arr2 = "Hey Charlie!"
+for (const i of arr2) {
+  // console.log(i)
+}
+
+//Maps    //duplicates ignored
+//forof loop
+const mp = new Map()
+mp.set('IN',"India")
+mp.set('US',"USA")
+mp.set('INDO',"Indonesia")
+
+// console.log(mp)
+//Map(3) { 'IN' => 'India', 'US' => 'USA', 'INDO' => 'Indonesia' }
+
+for (const [key] of mp) {   //[] to be used to get key and value of map
+  // console.log(key)    //return only key not value
+}
+
+for (const [key,value] of mp) {   //[] to be used to get key and value of map
+  // console.log(key,value)    
+}
+  /*
+IN India
+US USA
+INDO Indonesia
+  */
+
+for (const key of mp) {
+  // console.log(key)    
+}
+  /*
+[ 'IN', 'India' ]
+[ 'US', 'USA' ]
+[ 'INDO', 'Indonesia' ]
+  */
+
+
+const myobj = {
+  game1: "BGMI",
+  game2:"GTAV"
+}
+// for (const i of myobj) {
+  // console.log(i)      //ERROR --> object not iterable
+// }
+
+
+//forin loop
+const lang = {
+  cpp:"C++",
+  JS: "JavaScript",
+  PY: "python",
+  rb:"Ruby"
+}
+for (const key in lang) {
+  // console.log(`${key} is called ${lang[key]}`)    //key --> return key only not value , lang[key] --> return value not key
+}
+
+for (const key in arr) {
+  // console.log(`${key} : ${arr[key]}`)    //In for in loop, key acts like index in case of array so we need to give arr[key] to get its value.
+}
+
+for (const key in mp) {
+//  console.log(key)   //will not return enything i.e. map is not iterable in for..in loops unlike for...of loops
+}
+
+const codebits = [0,11,1,1]
+codebits.forEach(function(i){
+  // console.log(i)    //arr elements prints
+})
+codebits.forEach((i) => {
+  // console.log(i)    //arr elements prints
+})
+
+function justPrint(item){
+  // console.log(item)
+}
+
+// codebits.forEach(justPrint)   //print all elements in codebits
+
+codebits.forEach((item,index,arr) => {
+  // console.log(item,index,arr)    //arr elements,inex,whole aray prints
+})
+
+// iterating object inside array
+const arrobj= [
+  {lang:"Java",cpp:"C++",py:"Python"},
+  {lang:"C++",java:"Java",py:"Python"},
+  {lang:"Python",java:"Java",cpp:"C++"},
+]
+
+arrobj.forEach((i)=> {
+  // console.log(i.lang)   // Java C++ Python
+})
