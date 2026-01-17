@@ -405,6 +405,7 @@ let arr = [2,7,345,76]
 // } while (j<arr.length);
 
 
+//video29
 //High Order Array loops
 //for of
 for (const i of arr) {
@@ -416,7 +417,10 @@ for (const i of arr2) {
   // console.log(i)
 }
 
-//Maps    //duplicates ignored
+//Maps    
+//Map is used to transform every element in an array and return a new array of the same length. 
+//duplicates ignored
+
 //forof loop
 const mp = new Map()
 mp.set('IN',"India")
@@ -505,3 +509,131 @@ const arrobj= [
 arrobj.forEach((i)=> {
   // console.log(i.lang)   // Java C++ Python
 })
+
+//video30
+//in detail forEach
+//forEach doesnot return anything only exits callback
+// it cannot be broken i.e. no use of break;
+//internally works like this:
+/*
+function forEach(callback){
+  //do something
+}
+*/
+
+//Filter method of array
+//filter is used to create a new array containing only the elements that satisfy a specific condition
+//It takes a callback function. If the condition inside the callback returns true, the value is kept; if false, it's excluded.
+
+myNums= [2,6,4,7,1,0]
+// const newNums = myNums.filter( (i) => {
+//   return i>2
+// })
+// console.log(newNums)
+//If you open a scope with { }, you must use the return keyword, otherwise, it returns an empty array
+
+
+//ALTERNATIVE for above console
+// const newNums = myNums.filter( (i) => i>3)
+// console.log(newNums)
+
+//Through forEach
+// const newNums = []    //created an empty array
+// myNums.forEach((i) => {
+//   if(i>3){
+//     newNums.push(i)   //pushed the accepted values
+//   }
+// })
+// console.log(newNums)    //[ 6, 4, 7 ]
+
+//real problem
+const books = [
+{ title: 'Book One', genre: 'Fiction', publish: 1981,
+edition: 2004},
+{ title: 'Book Two', genre: 'Non-Fiction', publish: 1992,
+edition: 2008},
+{ title: 'Book Three', genre: 'History', publish: 1999,
+edition: 2007},
+{ title: 'Book Four', genre: 'Non-Fiction', publish: 1989,
+edition: 2010},
+{ title: 'Book Five', genre: 'Science', publish: 2009,
+edition: 2014},
+{title: 'Book Six', genre: 'Fiction', publish: 1987,
+edition: 2010},
+{ title: 'Book Seven', genre: 'History', publish: 1986,
+edition: 1996}
+];
+
+const userDemand = books.filter((i) => i.edition > 2010)
+// console.log(userDemand)
+/*
+[
+  {
+    title: 'Book Five',
+    genre: 'Science',
+    publish: 2009,
+    edition: 2014
+  }
+]
+*/
+
+//through forEach
+// books.forEach((i)=> {
+//   if(i.genre === 'Science' && i.publish===2009){
+//     console.log(i)
+//   }
+// })
+
+//filter() is callback function similarly, map() is also. 
+// filter() & map() both creates a new array and doesn't modify the original array
+// let newNumss = myNums.map((i)=>i>2)
+// console.log(newNumss)   //[ false, true, true, true, false, false ]
+
+//CHAINING ----> In chaining, the second method receives the array modified by the first method
+//filter and maps together --> chaining :can use multiple methods together
+newNums = myNums.map((i)=> i*10)
+  .map((i) => i+1)
+  .filter((i)=>{
+  return i > 2
+})
+// console.log(newNums)    //[ 21, 61, 41, 71, 11 ]
+
+
+//reduce() method
+/*
+reduce() is used to boil down an array into a single value (like a sum or a total).
+Accumulator: Stores the accumulated result of previous operations.
+Current Value: The current element being processed.
+Initial Value: The starting value for the accumulator
+Real-world Example: Calculating the total price of items in a shopping cart.
+*/
+
+let shoppingCart = [
+  {
+    course: "JS",
+    price:2999
+  },
+  {
+    course: "C++",
+    price:1999
+  },
+  {
+    course: "BootStrap",
+    price:3000
+  },
+  {
+    course: "ML",
+    price:1500
+  }
+]
+
+let totalPrice = shoppingCart.reduce((acc,currunt_val)=>{   //'acc' here is accumulator, 'current_val' is the current element, '0' is put later which is the initial value in the cart 
+  return acc + currunt_val.price
+},0)
+// console.log(totalPrice)    //9498
+
+//short syntax alternative
+let TPrice = shoppingCart.reduce((acc,currunt_val) => acc + currunt_val.price,0)
+// console.log(TPrice)   //9498
+
+

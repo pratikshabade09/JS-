@@ -313,3 +313,5 @@ let scr4=300
 
 // console.log(Array.of(scr1, scr2,scr3,scr4))      //[ 100, 200, 100, 300 ]
 
+
+
