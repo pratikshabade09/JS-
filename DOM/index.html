@@ -9,7 +9,7 @@
     .bg-black{
         background-color: black;
     }
-    .whity{
+    *{
         color: aliceblue;
     }
 </style>
@@ -22,13 +22,37 @@
         <p>Lorem ipsumvitae fugagil blanditiis!</p>
 
         <ul>
-            <li>green</li>
-            <li>blue</li>
-            <li>orange</li>
-            <li>red</li>
+            <li class="l1">green</li>
+            <li class="l1">blue</li>
+            <li class="l1">orange</li>
+            <li class="l1">red</li>
         </ul>
     </div>
+    <div class="parent">
+        <div class="day">Mon</div>
+        <div class="day">Tue</div>
+        <div class="day">Wed</div>
+        <div class="day">Thu</div>
+    </div>
+
 </body>
+<script>
+    const parent = document.querySelector('.parent')
+    // console.log(parent);
+    // console.log(parent.children[2].innerHTML);  //Wed
+
+    // for( i=0;i<parent.children.length;i++){
+    //     console.log(parent.children[i].innerHTML); 
+    //     parent.children[i].style.color='green'
+    // }
+    // console.log(parent.firstElementChild);      //Mon child
+    // console.log(parent.lastElementChild);      //Thu child
+    const dayOne = document.querySelector('.day');
+    // console.log(dayOne.parentElement);
+    // console.log(dayOne.nextElementSiblings);
+
+    // console.log("NODE: ", parent.childNodes) //this includes each and everything linke linebreak, etc.
+</script>
 </html>
 
 
@@ -39,9 +63,12 @@
  -->
 
  <!-- document.getElementByClassName('heading')
-  document.querySelector('h1')  ->Returns the FIRST matching element.
-  document.querySelectorAll('h1')   ->Returns ALL matching elements as a NodeList (array-like) so we need to give index to get it.
- -->
+ -> document.querySelector('h1')  ->Returns the FIRST matching element.
+ -> document.querySelectorAll('h1')   ->Returns ALL matching elements as a NodeList (array-like) so we need to give index to get it.
+ -> 
+ 
+ 
+  -->
 
 
 
